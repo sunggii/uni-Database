@@ -2,7 +2,9 @@
 - เนื้อหาจะต่อจาก lab 2 โดยหัวข้อที่ได้เรียนใน lab 3 คือ
     - join
     - clause อื่นๆที่ต่อจาก where clause
+
     ![alt text](./img/clause.png)
+    
 # ใน lab นี้เราทำอะไร
 - ได้ลองใช้ jupyter ในการ query
 - เรียน Basic Operations ต่อจาก lab 2 
