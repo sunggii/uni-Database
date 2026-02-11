@@ -1,8 +1,4 @@
-# Advance Qeury
-- Subqeury -> การ Qeury ซ้อนอยู่ใน Qeury เพื่อให้ได้ผลลัพธ์ที่ต้องการ
-- Correlatate Subqeury -> ความสัมพัธ์ของ Subqeury
-
-## Subqeury 
+# Subqeury 
 ![alt text](./img/diagram.png)
 
 ### Single Row Subqueries 
@@ -12,8 +8,7 @@
     - 1 row, 1 column -> ```WHERE salary``` where มาแค่ตัวเเดียว
     - Multiple Columns -> ```WHERE (dept, salary)``` where มา > 1
 
-
-**ตัวอย่าง อยู่ใน ```WHERE```**
+**ตัวอย่าง อยู่ใน ```WHERE```** 
 ```sql
 select
 firstname || ' ' || lastname,
@@ -88,8 +83,8 @@ select e.employeenumber,o.officecode
 -------------------------
 
 ### Multiple-Row Subquery 
-- ถ้าเขียนอยู่ใน ```FROM``` มันจะเป็น Multiple อยู่แล้ว เพราะจะได้ตารางออกมาเลย 1 ตาราง
-- บางกรณีก็เขียนใน ```IN```,  ```NOT IN```,  ```ANY```,  ```ALL```, ```DISTINCT```
+- ถ้าเขียนอยู่ใน ```FROM``` หรืออาจอยู่ใน `JOIN`มันจะเป็น Multiple อยู่แล้ว เพราะจะได้ตารางออกมาเลย 1 ตาราง
+- บางกรณีก็เขียนใน ```IN```,  ```NOT IN```,  ```ANY```,  ```ALL```, ```DISTINCT``` จะอยู่ที่ `WHERE`
     - ```DISTINCT``` = เอาเฉพาะค่าที่ ไม่ซ้ำ
     -  ```ANY``` = ตัวใดตัวนึง true ถึงจะเป็น true
     - ```ALL``` = ต้องเป็น true ทั้งหมด ถึงจะเป็น true
@@ -146,3 +141,15 @@ from orderdetails,
   WHERE ordernumber = 10100) as a
 where quantityordered> a.avg
 ```
+
+## สรุป `Single` vs `Multiple`
+- `Single`, `Multiple` ต่างกันที่จำนวน row ที่ qeury ออกมาถ้าออกมา
+    - 1 row -> `Single`
+    - N row -> `Multiple`
+    - ส่วนจะเป็น 
+        - `scalar`, `1 row, M Columns`
+        - `N row, 1 Columns`, `N row, M Columns`
+    - อยู่ที่ SELECT ตอน subqeury ถ้า 
+        - SELECT มา 1 -> 1 Columns
+        - SELECT มา M -> M Columns
+

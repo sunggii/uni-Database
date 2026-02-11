@@ -3,13 +3,15 @@
 
 ## ORDER BY
 - เป็นคำสั่งที่ใช้ในการเรียง (Sorting)
+- ASC (ASCENDING) = เรียงจากน้อย -> มาก
+- DESC (DESCENDING) = เรียงจากมาก -> น้อย
 
 **ตัวอย่าง**
 ```sql
 SELECT contactLastname, contactFirstname 
 FROM classicmodels.customers 
 --ORDER BY RANDOM() --กรณีต้องการสุ่มค่า
-ORDER BY contactLastname;
+ORDER BY contactLastname ASC; --เรียงจากน้อย -> มาก
 ```
 **result**
 - จะเห็นว่าเรียงลำดับตามนามสกุล
@@ -18,12 +20,13 @@ ORDER BY contactLastname;
 
 ## GROUP BY
 - เป็นคำสั่งที่ใช้ในการจัดกลุ่ม (Grouping) โดยแถวข้อมูลที่มีค่าเหมือนกันใน col ที่กำหนด
-- มักจะใช้คู่กับ ฟังก์ชันสรุปผล (Aggregate Functions) เช่น
+- จะใช้คู่กับ ฟังก์ชันสรุปผล (Aggregate Functions) เช่น
     - COUNT() → นับจำนวน
     - SUM() → รวมค่า
     - AVG() → ค่าเฉลี่ย
     - MIN(), MAX()
-- col ที่อยู่ใน ```SELECT``` ต้องอยู่ใน ```GROUP BY```หรืออยู่ในฟังก์ชัน Aggregate 
+- col ที่อยู่ใน ```SELECT``` ต้องอยู่ใน ```GROUP BY```
+    - จากตัวอย่าง `status` อยู่ใน SELECT ดังนั้น `status` ต้องอยู่ใน ```GROUP BY``` ด้วยไม่งั้นจะ error
 
 **ตัวอย่าง**
 ```sql
