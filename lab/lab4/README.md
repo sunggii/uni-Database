@@ -1,6 +1,9 @@
 # Advance Qeury
-- Subqeury -> การ Qeury ซ้อนอยู่ใน Qeury เพื่อให้ได้ผลลัพธ์ที่ต้องการ
-- Correlated Subquery -> ความสัมพันธ์ของ Subqeury 
+###  Subqeury 
+- การ Qeury ซ้อนอยู่ใน Qeury เพื่อให้ได้ผลลัพธ์ที่ต้องการ
+
+### Correlated Subquery 
+- ความสัมพันธ์ของ Subqeury (inner) กับ qeury (outer) **หัวข้อนี้อาจารย์ไม่ได้เน้นมาก**
 
 ## ใน lab นี้เราทำอะไร
 - ได้ฝึกการทำ subqeury ทั้งแบบ **Single Row Subquery** และ **Multiple-Row Subquery**
