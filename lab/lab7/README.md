@@ -7,12 +7,12 @@
 - `ROLLBACK` ใช้ยกเลิกการเปลี่ยนแปลงทั้งหมดใน Transaction และย้อนกลับไปยังสถานะก่อนเริ่ม 
 
 ## Concurrency Control
-Concurrency Control เกิดขึ้นมาเพื่อแก้ปัญหา Concurrent Problem โดยในบทนี้เราจะแก้ปีญหาด้วย `Isolation Level`
+Concurrency Control เกิดขึ้นมาเพื่อแก้ปัญหา Concurrent Problem โดยในบทนี้เราจะแก้ปัญหาด้วย `Isolation Level`
 
 ![alt text](./img/con1.png)
 
 ## Concurrent Problem คืออะไร?
-คือปีญหาที่เกิดขึ้นเมื่อมี หลาย transaction ทำงานพร้อมกัน (concurrently) แล้วเข้าถึงข้อมูลเดียวกันในเวลาใกล้เคียงกัน ทำให้ข้อมูลผิดพลาดหรือไม่สอดคล้องกัน
+คือปีญหาที่เกิดขึ้นเมื่อมีหลาย transaction ทำงานพร้อมกัน (concurrently) แล้วเข้าถึงข้อมูลเดียวกันในเวลาใกล้เคียงกัน ทำให้ข้อมูลผิดพลาดหรือไม่สอดคล้องกัน
 
 ## ส่งผลให้เกิปัญหาดังนี้
 - Lost Update – ค่าโดนเขียนทับโดยไม่ตั้งใจ
