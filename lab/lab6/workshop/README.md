@@ -65,7 +65,7 @@ LANGUAGE plpgsql AS $$ BEGIN RETURN 'Return Hello'; END; $$;
 
     `select * from test_func2()`
 
-    ![alt text](/lab6/img/workshop.png)
+    ![alt text](../img/workshop.png)
 
 2. ที่ไฟล์ `DemoApplication.java`
 ```java
