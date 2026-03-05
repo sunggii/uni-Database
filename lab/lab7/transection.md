@@ -21,7 +21,7 @@ VALUES
 SELECT * FROM offices;
 ```
 
-![alt text](/lab7/img/tran1.png)
+![alt text](./img/tran1.png)
 
 - step 4: เลือกคำสั่งปิด Transaction ตามต้องการ
 ```sql
