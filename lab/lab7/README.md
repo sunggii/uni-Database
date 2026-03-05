@@ -8,7 +8,8 @@
 
 ## Concurrency Control
 Concurrency Control เกิดขึ้นมาเพื่อแก้ปัญหา Concurrent Problem โดยในบทนี้เราจะแก้ปีญหาด้วย `Isolation Level`
-![alt text](/lab7/img/con1.png)
+
+![alt text](./img/con1.png)
 
 ## Concurrent Problem คืออะไร?
 คือปีญหาที่เกิดขึ้นเมื่อมี หลาย transaction ทำงานพร้อมกัน (concurrently) แล้วเข้าถึงข้อมูลเดียวกันในเวลาใกล้เคียงกัน ทำให้ข้อมูลผิดพลาดหรือไม่สอดคล้องกัน
