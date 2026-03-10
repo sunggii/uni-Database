@@ -36,7 +36,7 @@ select createemaillist( )
 
 **output**
 
-![alt text](/lab6/img/cursor1.png)
+![alt text](./img/cursor1.png)
 
 
 ## ตัวอย่าง code2: cursor + if
@@ -84,9 +84,9 @@ select createemaillist( )
 
 จะเห็นว่าได้ email ของพนักงานที่มี officecode = 6
 
-![alt text](/lab6/img/cursor2.png)
+![alt text](./img/cursor2.png)
 
-![alt text](/lab6/img/cursor3.png)
+![alt text](./img/cursor3.png)
 
 
 

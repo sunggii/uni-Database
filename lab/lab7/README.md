@@ -7,6 +7,7 @@
 - `ROLLBACK` ใช้ยกเลิกการเปลี่ยนแปลงทั้งหมดใน Transaction และย้อนกลับไปยังสถานะก่อนเริ่ม 
 
 ## Concurrency Control
+<<<<<<< HEAD
 Concurrency Control เกิดขึ้นมาเพื่อแก้ปัญหา Concurrent Problem โดยในบทนี้เราจะแก้ปีญหาด้วย `Isolation Level`
 ![alt text](./img/con1.png)
 
@@ -17,10 +18,16 @@ Concurrency Control
      ↓
 Database ใช้ Locking Method เพื่อทำให้ Isolation Level นั้นเกิดขึ้นจริง
 ```
+=======
+Concurrency Control เกิดขึ้นมาเพื่อแก้ปัญหา Concurrent Problem โดยในบทนี้เราจะแก้ปัญหาด้วย `Isolation Level`
+
+![alt text](./img/con1.png)
+>>>>>>> bc382212b142cedaf1ecc3752475da943e1f1169
 
 ## Concurrent Problem คืออะไร?
-คือปีญหาที่เกิดขึ้นเมื่อมี หลาย transaction ทำงานพร้อมกัน (concurrently) แล้วเข้าถึงข้อมูลเดียวกันในเวลาใกล้เคียงกัน ทำให้ข้อมูลผิดพลาดหรือไม่สอดคล้องกัน
+คือปีญหาที่เกิดขึ้นเมื่อมีหลาย transaction ทำงานพร้อมกัน (concurrently) แล้วเข้าถึงข้อมูลเดียวกันในเวลาใกล้เคียงกัน ทำให้ข้อมูลผิดพลาดหรือไม่สอดคล้องกัน
 
+<<<<<<< HEAD
 ## ส่งผลให้เกิปัญหาดังนี้
 | Problem                 | ความหมาย                                         |
 | ----------------------- | ------------------------------------------------ |
@@ -31,6 +38,15 @@ Database ใช้ Locking Method เพื่อทำให้ Isolation Level
 | **Count Phantom**       | query เดิมแต่จำนวน row เปลี่ยน (insert/delete)   |
 | **Incorrect Summary**   | SUM/AVG/COUNT ผิดเพราะมี update ระหว่างคำนวณ     |
 
+=======
+## ส่งผลให้เกิดปัญหาดังนี้
+- Lost Update – ค่าโดนเขียนทับโดยไม่ตั้งใจ
+- Dirty Read – อ่านข้อมูลที่ยังไม่ commit
+- Non-repeatable Read – อ่านรอบแรกกับรอบสองได้ค่าต่างกัน
+- Write Phantom – มี row ใหม่โผล่จาก insert
+- Count Phantom – มี Count เพิ่มขึ้นมาแบบงงๆ
+- Incorrect Summary	– SUM / AVG / COUNT ผิดเพราะ concurrent update
+>>>>>>> bc382212b142cedaf1ecc3752475da943e1f1169
 
 ## Isolation Level คืออะไร?
 Isolation Level คือระดับการแยกการทำงานของแต่ละ transaction
