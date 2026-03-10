@@ -29,7 +29,6 @@
     10 |      40  -> T2
     (2 rows)
     ```
-<<<<<<< HEAD
 
 ## Solve: Count Phantom
 - ทดลองทำตาม diagram นี้
@@ -69,5 +68,3 @@
     2 | f
     (2 rows)
     ```
-=======
->>>>>>> bc382212b142cedaf1ecc3752475da943e1f1169
