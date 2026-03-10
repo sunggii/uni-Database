@@ -1,12 +1,13 @@
 # Concurrency Control
 จำลองการทำ Isolation Level ที่ Transection level เท่านั้น
 
-| Isolation Level      | ป้องกันปัญหาอะไรได้บ้าง                |
-| -------------------- | -------------------------------------- |
-| **Read Uncommitted** | แทบไม่ป้องกันอะไรเลย (Dirty Read ได้)  |
-| **Read Committed**   | ❌ Dirty Read                           |
-| **Repeatable Read**  | ❌ Dirty Read, ❌ Non-repeatable Read    |
-| **Serializable**     | ❌ ทุกปัญหา (เหมือนรันทีละ transaction) |
+| Isolation Level      | ป้องกันปัญหาอะไรได้บ้าง                                                              |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| **Read Uncommitted** | แทบไม่ป้องกันอะไรเลย (Dirty Read ยังเกิดได้)                                         |
+| **Read Committed**   | ป้องกัน **Dirty Read**                                                               |
+| **Repeatable Read**  | ป้องกัน **Dirty Read**, **Non-repeatable Read**                                      |
+| **Serializable**     | ป้องกัน **Lost Update, Dirty Read, Non-repeatable Read, Phantom, Incorrect Summary** |
+
 
 **หมายเหตุ**
 - เนื่องจาก PostgreSQL not support `read uncommited` จึงไม่ได้ทำใน lab นี้

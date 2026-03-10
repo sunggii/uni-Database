@@ -3,7 +3,7 @@
 - ไม่เห็นข้อมูลที่ยังไม่ commit
 - จึง ป้องกัน Dirty Read
 
-## Read Commit : Solve Dirty read Problem
+## Solve: Dirty read Problem
 - ทดลองทำตาม diagram นี้
 
 ![alt text](/lab7/img/read1.png)
@@ -19,7 +19,7 @@
     DETAIL:  Key (id)=(20) already exists.
     ```
 
-## Read Commit : Nonrepeatable Read Problem
+## Nonrepeatable Read Problem
 - ทดลองทำตาม diagram นี้
 
 ![alt text](/lab7/img/read2.png)
