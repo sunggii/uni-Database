@@ -38,12 +38,15 @@ Concurrency Control เกิดขึ้นมาเพื่อแก้ปั
 
 
 ## ส่งผลให้เกิดปัญหาดังนี้
-- Lost Update – ค่าโดนเขียนทับโดยไม่ตั้งใจ
-- Dirty Read – อ่านข้อมูลที่ยังไม่ commit
-- Non-repeatable Read – อ่านรอบแรกกับรอบสองได้ค่าต่างกัน
-- Write Phantom – มี row ใหม่โผล่จาก insert
-- Count Phantom – มี Count เพิ่มขึ้นมาแบบงงๆ
-- Incorrect Summary	– SUM / AVG / COUNT ผิดเพราะ concurrent update
+| Problem                 | ความหมาย                                         |
+| ----------------------- | ------------------------------------------------ |
+| **Lost Update**         | transaction หนึ่งเขียนทับค่าของอีก transaction   |
+| **Dirty Read**          | อ่านข้อมูลที่ยังไม่ commit                       |
+| **Non-repeatable Read** | อ่าน row เดิม 2 ครั้งได้ค่าต่างกัน               |
+| **Write Phantom**       | update/insert ทำให้ rule ของระบบผิด (write skew) |
+| **Count Phantom**       | query เดิมแต่จำนวน row เปลี่ยน (insert/delete)   |
+| **Incorrect Summary**   | SUM/AVG/COUNT ผิดเพราะมี update ระหว่างคำนวณ     |
+
 
 ## Isolation Level คืออะไร?
 Isolation Level คือระดับการแยกการทำงานของแต่ละ transaction
